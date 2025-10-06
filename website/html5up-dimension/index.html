@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Spot the Scam Before It Spots You</title>
+
+  <!-- Page CSS (primary) -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+  <!-- Font Awesome (for the shield icon). Remove if not needed or if you're using a different icon set -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Minimal fallback styles so sections display even if your main.css doesn't yet include grid rules.
+       Move these rules into assets/css/main.css and remove this <style> when you're happy with layout. -->
+  <style>
+    /* fallback / example layout */
+    :root{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+    body{margin:0;background:#f4f6f8;color:#111}
+    #wrapper{max-width:1100px;margin:0 auto;padding:1.5rem}
+    header#header{display:flex;gap:1rem;align-items:center;padding:1rem 0}
+    .logo .icon{font-size:2.2rem;color:#2b7a78}
+    .content .inner h1{margin:.2rem 0}
+    .button.primary{display:inline-block;padding:.6rem 1rem;background:#2b7a78;color:#fff;border-radius:6px;text-decoration:none}
+
+    .grid-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:1.25rem}
+    .grid-item{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+    .image.main img{max-width:100%;height:auto;border-radius:6px}
+
+    #footer{text-align:center;margin:1.5rem 0;color:#666}
+
+    /* audio element full width */
+    audio{width:100%;}
+
+    @media (max-width:520px){
+      header#header{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <div class="logo" aria-hidden="true">
+        <span class="icon fa-solid fa-shield-halved"></span>
+      </div>
+      <div class="content">
+        <div class="inner">
+          <h1>Spot the Scam Before It Spots You</h1>
+          <p>Empowering Australians aged 40–65 to stay safe online and recognise digital scams before they happen.</p>
+          <a href="#tips" class="button primary">Learn More</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+      <div class="grid-container">
+
+        <!-- Podcast -->
+        <section class="grid-item" id="podcast-section" aria-labelledby="podcast-heading">
+          <article aria-describedby="podcast-desc">
+            <h2 id="podcast-heading" class="major">Podcast: Staying Safe Online</h2>
+            <p id="podcast-desc">Listen to our short 5-minute podcast featuring real stories, expert insights, and practical advice on avoiding digital scams.</p>
+            <audio controls>
+              <source src="assets/audio/podcast.mp3" type="audio/mpeg">
+              <!-- optional alternative formats -->
+              <source src="assets/audio/podcast.ogg" type="audio/ogg">
+              Your browser does not support the audio element.
+            </audio>
+            <p><strong>How to use:</strong> Play this podcast here or download and share it at community events and workshops.</p>
+          </article>
+        </section>
+
+        <!-- Infographic -->
+        <section class="grid-item" id="infographic-section" aria-labelledby="infographic-heading">
+          <article>
+            <h2 id="infographic-heading" class="major">Scams by the Numbers</h2>
+            <p>In 2024, Australians lost over <strong>$15 billion</strong> to online scams. Learn where scams happen and who is most at risk.</p>
+            <div class="image main">
+              <img src="assets/images/infographic.png" alt="Infographic: scams by the numbers — placeholder" />
+            </div>
+            <p><strong>How to use:</strong> Print this infographic as a handout or display it in digital literacy classes and workshops.</p>
+          </article>
+        </section>
+
+        <!-- Campaign Visual -->
+        <section class="grid-item" id="campaign-section" aria-labelledby="campaign-heading">
+          <article>
+            <h2 id="campaign-heading" class="major">Campaign Visual</h2>
+            <p>This image represents our public service announcement campaign — designed to raise awareness and encourage conversations about online safety.</p>
+            <div class="image main">
+              <img src="assets/images/campaign.jpg" alt="Campaign visual placeholder" />
+            </div>
+            <p><strong>How to use:</strong> Share this image on social media or display it in libraries, schools, and community centres.</p>
+          </article>
+        </section>
+
+        <!-- Key Facts -->
+        <section class="grid-item" id="facts-section" aria-labelledby="facts-heading">
+          <article>
+            <h2 id="facts-heading" class="major">Key Scam Insights</h2>
+            <ul>
+              <li>💸 Australians lost over <strong>$15 billion</strong> to scams in 2024.</li>
+              <li>📱 Most scams happen via <strong>text messages, emails, and social media.</strong></li>
+              <li>👤 People aged <strong>40–65</strong> are increasingly targeted by online scams.</li>
+              <li>📉 Only <strong>7%</strong> of victims successfully recover their lost funds.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- Tips -->
+        <section class="grid-item" id="tips" aria-labelledby="tips-heading">
+          <article>
+            <h2 id="tips-heading" class="major">How to Protect Yourself</h2>
+            <p>Simple steps you can take to reduce your risk of becoming a scam victim:</p>
+            <ul>
+              <li>🔒 Never share one-time codes, PINs, or passwords with anyone.</li>
+              <li>📧 Double-check email addresses and URLs before clicking on links.</li>
+              <li>📞 Hang up and call your bank or service provider directly if unsure.</li>
+              <li>📱 Enable two-factor authentication wherever possible.</li>
+              <li>🧠 Stay informed about the latest scams by visiting trusted websites like Scamwatch.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- References -->
+        <section class="grid-item" id="references-section" aria-labelledby="references-heading">
+          <article>
+            <h2 id="references-heading" class="major">References</h2>
+            <ol>
+              <li>Australian Competition and Consumer Commission. (2024). Scam statistics report.</li>
+              <li>Smith, J. (2023). The rise of digital scams. Cyber Security Journal.</li>
+              <li>Government of Australia. (2024). Scamwatch annual data.</li>
+              <li>Jones, L. (2023). How online scams target older Australians. Digital Safety Review.</li>
+              <li>Westpac Bank. (2024). Scam prevention guide.</li>
+              <li>Commonwealth Bank. (2024). Online safety and security best practices.</li>
+              <li>Australian Cyber Security Centre. (2024). Stay Smart Online guide.</li>
+              <li>Brown, P. (2023). Social media scams: A growing threat. Security Today.</li>
+              <li>Department of Home Affairs. (2024). Cybercrime and scam prevention.</li>
+              <li>National Cybersecurity Alliance. (2023). Protecting personal information online.</li>
+            </ol>
+          </article>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <p>&copy; 2025 Spot the Scam PSA. Design adapted from <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a>.</p>
+    </footer>
+
+  </div>
+
+  <!-- BG (keep in DOM if used by your scripts) -->
+  <div id="bg" aria-hidden="true"></div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
