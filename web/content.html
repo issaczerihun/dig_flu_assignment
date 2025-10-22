@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Spot the Scam Before It Spots You</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+  /* Match landing page dark theme */
+  body { 
+    margin: 0; 
+    padding: 0; 
+    background: #1a1a1a; 
+    color: white; 
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .background-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  
+  #wrapper {
+    background: transparent;
+  }
+  
+  header {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+  }
+  
+  header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  header p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+  }
+  
+  /* Lightweight sidebar layout without touching compiled CSS */
+  article { 
+    position: relative; 
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  article h2 {
+    color: white;
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  article p, article li {
+    color: rgba(255,255,255,0.9);
+    line-height: 1.6;
+  }
+  
+  article strong {
+    color: white;
+  }
+  
+  .page-layout { display: flex; gap: 2rem; align-items: flex-start; }
+  main { flex: 1 1 auto; min-width: 0; }
+  .sidebar { 
+    flex: 0 0 260px; 
+    max-width: 260px; 
+    background: rgba(255,255,255,0.08); 
+    border: 1px solid rgba(255,255,255,0.2); 
+    border-radius: 8px; 
+    padding: 1.5rem; 
+    position: static;
+    backdrop-filter: blur(10px);
+  }
+  
+  .sidebar h3 { 
+    margin: 0 0 1rem 0; 
+    font-size: 1.2rem; 
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .sidebar ul { list-style: none; padding: 0; margin: 0; }
+  .sidebar li { margin: 0.6rem 0; }
+  .sidebar a { 
+    text-decoration: none; 
+    color: rgba(255,255,255,0.8);
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.5rem 0;
+  }
+  
+  .sidebar a:hover {
+    color: white;
+  }
+  
+  .sidebar .note { font-size: 0.9rem; opacity: 0.85; }
+  
+  footer {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  footer p {
+    color: rgba(255,255,255,0.8);
+  }
+  
+  footer a {
+    color: white;
+  }
+  
+  @media (max-width: 980px) {
+    .page-layout { flex-direction: column; }
+    .sidebar { width: 100%; max-width: none; position: static; }
+    
+    header h1 {
+      font-size: 2rem;
+    }
+    
+    article {
+      padding: 1.5rem;
+    }
+  }
+  </style>
+</head>
+
+<body class="is-preload">
+  <div class="background-pattern"></div>
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Header -->
+	<header style="text-align:center;">
+		<h1>Spot the Scam Before It Spots You</h1>
+		<p><b>Empowering Australians aged 40–65 to stay safe online and recognise digital scams before they happen</b></p>
+	  </header>
+	  <br>
+	  
+	<div class="page-layout">
+		<aside id="sidebar" class="sidebar" aria-label="Section sidebar">
+			<h3>Sections</h3>
+			<ul>
+				<li><a href="#podcast">Podcast</a></li>
+				<li><a href="#infographic">Infographic</a></li>
+				<li><a href="#campaign">Campaign</a></li>
+				<li><a href="#facts">Facts</a></li>
+				<li><a href="#tips">Tips</a></li>
+				<li><a href="#references">References</a></li>
+			</ul>
+		</aside>
+
+		<main>
+		      <!-- Podcast -->
+			<article id="podcast">
+						<h2 class="major">Podcast: Staying Safe Online</h2>
+						<p>Listen to our short 5-minute podcast featuring real stories, expert insights, and practical advice on avoiding digital scams.</p>
+						<div style="text-align:center;">
+							<img src="made_assets/Podcast cover image.png" alt="Podcast Cover" width="400" height="400" />
+							<br>
+							<audio controls>
+								<source src="made_assets/TPF Podcast.mp3" type="audio/mpeg">
+								Your browser does not support the audio element.
+							</audio>
+						</div>
+            <br>
+						<p><strong>How to use:</strong> Play this podcast here for more infomation from top experts!</p>
+			</article>
+
+		      <!-- Infographic -->
+			  <article id="infographic">
+				<h2 class="major">Scams by the Numbers</h2>
+				<p>In 2024, Australians lost over <strong>$2 billion</strong> to online scams. Learn where scams happen and who is most at risk.</p>
+
+				<div style="text-align:center;">
+					<img src="made_assets/infographic.jpeg" alt="Infographic placeholder" style="width: 25%; height: auto;" style="text-align:center;">
+				</div>
+        <br>
+				<p><strong>How to use:</strong> Look out for this at bus stops, train stations and more!</p>
+			</article>
+
+				<!-- Campaign Image -->
+				<article id="campaign">
+							<h2 class="major">Campaign Visual</h2>
+							<p>This image represents our public service announcement campaign — designed to raise awareness and encourage conversations about online safety.</p>
+
+              <div style="text-align:center;">
+                <img src="made_assets/firefly.jpg" alt="AI Image" style="width: 25%; height: auto;" style="text-align:center;">
+              </div>
+
+							<br>
+							<p><strong>How to use:</strong> Use this as a friendly reminder!</p>
+				</article>
+
+				 <!-- Scam Facts -->
+				 <article id="facts">
+							<h2 class="major">Key Scam Insights</h2>
+							<ul>
+							  <li>💸 Australians lost over <strong>$2 billion</strong> to scams in 2024. <sup>[1]</sup></li>
+							  <li>📱 Most scams happen via <strong>text messages, emails, and social media. <sup>[1]</sup> </strong></li>
+							  <li>👤 People aged <strong>40–65</strong> are increasingly targeted by online scams.<sup>[2]</sup> </li>
+							  <li>📉 Only <strong>7%</strong> of victims successfully recover their lost funds.<sup>[3]</sup> </li>
+							</ul>
+				  </article>
+
+			    <!-- How to Protect Yourself -->
+				<article id="tips">
+							<h2 class="major">How to Protect Yourself</h2>
+							<p>Simple steps you can take to reduce your risk of becoming a scam victim:</p>
+							<ul>
+							  <li>💸 If it sounds too good to be true, it probably is.</li>
+							  <li>📧 There’s no shame in asking. Protecting your family starts with speaking up.</li>
+							  <li>💻 When in doubt, type it out. Avoid clicking on email or SMS links.</li>
+							  <li>🤔 Think before you tap. Official services won’t ask for money or info through pop-ups.</li>
+							  <li>🕐 Take a break. Don't be in a rush to transfer money before you verify.</li>
+							</ul>
+				  </article>
+
+			      <!-- References -->
+				  <article id="references">
+							<h2 class="major">References</h2>
+							<ol>
+							  <li>[1] - https://www.scamwatch.gov.au/system/files/targeting-scams-report-2024.pdf </li>
+							  <li>[2] - https://www.abs.gov.au/statistics/people/crime-and-justice/personal-fraud/latest-release </li>
+							  <li>[3] - https://www.abc.net.au/news/2024-08-20/asic-report-finds-most-bank-scam-victims-bear-the-burden/104247426 </li>
+							</ol>
+				  </article>
+			
+		</main>
+
+	</div>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+      <p class="copyright">&copy; 2025 Spot the Scam PSA. Design adapted from <a href="https://html5up.net">HTML5 UP</a>.</p>
+    </footer>
+
+  </div>
+
+  <!-- BG -->
+
+
+  <!-- Scripts -->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+
+</body>
+</html>
