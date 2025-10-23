@@ -142,6 +142,61 @@
       padding: 1.5rem;
     }
   }
+  
+  /* Image modal styles */
+  .image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90%;
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+  }
+  
+  .clickable-image {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .clickable-image:hover {
+    transform: scale(1.02);
+  }
   </style>
 </head>
 
@@ -177,7 +232,7 @@
 						<h2 class="major">Podcast: Staying Safe Online</h2>
 						<p>Listen to our short 5-minute podcast featuring real stories, expert insights, and practical advice on avoiding digital scams.</p>
 						<div style="text-align:center;">
-							<img src="made_assets/Podcast cover image.png" alt="Podcast Cover" width="400" height="400" />
+							<img id="podcast-img" src="made_assets/Podcast cover image.png" alt="Podcast Cover" class="clickable-image" width="400" height="400" />
 							<br>
 							<audio controls>
 								<source src="made_assets/TPF Podcast.mp3" type="audio/mpeg">
@@ -194,7 +249,7 @@
 				<p>In 2024, Australians lost over <strong>$2 billion</strong> to online scams. Learn where scams happen and who is most at risk.</p>
 
 				<div style="text-align:center;">
-					<img src="made_assets/infographic.jpeg" alt="Infographic placeholder" style="width: 25%; height: auto;" style="text-align:center;">
+					<img id="infographic-img" src="made_assets/infographic.jpeg" alt="Infographic placeholder" class="clickable-image" style="width: 50%; height: auto;" style="text-align:center;">
 				</div>
         <br>
 				<p><strong>How to use:</strong> Look out for this at bus stops, train stations and more!</p>
@@ -206,7 +261,7 @@
 							<p>This image represents our public service announcement campaign — designed to raise awareness and encourage conversations about online safety.</p>
 
               <div style="text-align:center;">
-                <img src="made_assets/firefly.jpg" alt="AI Image" style="width: 25%; height: auto;" style="text-align:center;">
+                <img id="campaign-img" src="made_assets/firefly.jpg" alt="AI Image" class="clickable-image" style="width: 25%; height: auto;" style="text-align:center;">
               </div>
 
 							<br>
@@ -262,6 +317,12 @@
   <!-- BG -->
 
 
+  <!-- Image Modal -->
+  <div id="imageModal" class="image-modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
   <!-- Scripts -->
 
 <script src="assets/js/jquery.min.js"></script>
@@ -270,7 +331,47 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 
-
+<script>
+// Image modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Get the modal
+  var modal = document.getElementById('imageModal');
+  var modalImg = document.getElementById('modalImage');
+  
+  // Get all clickable images
+  var clickableImages = document.querySelectorAll('.clickable-image');
+  
+  // Add click event to all clickable images
+  clickableImages.forEach(function(img) {
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    }
+  });
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  modal.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      modal.style.display = "none";
+    }
+  });
+});
+</script>
 
 </body>
 </html>
